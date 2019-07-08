@@ -47,19 +47,19 @@ class DataTests: XCTestCase {
         assertSucceeds(parseSuiteCompleted, forInput: "Test Suite 'AddressTest' passed at 2018-03-19 14:46:47.403.") { tuple in
             XCTAssertEqual("AddressTest", tuple.0.name)
             XCTAssertEqual(true, tuple.0.passed)
-            XCTAssertEqual(1521485207.403, tuple.0.endedAt.timeIntervalSince1970)
+            XCTAssertEqual(parseDateString("2018-03-19 14:46:47.403"), tuple.0.endedAt)
             XCTAssertEqual(".", tuple.1)
         }
         assertSucceeds(parseSuiteCompleted, forInput: "Test Suite 'AttributeOptionTest' passed at 2018-03-19 14:46:47.406.") { tuple in
             XCTAssertEqual("AttributeOptionTest", tuple.0.name)
             XCTAssertEqual(true, tuple.0.passed)
-            XCTAssertEqual(1521485207.406, tuple.0.endedAt.timeIntervalSince1970)
+            XCTAssertEqual(parseDateString("2018-03-19 14:46:47.406"), tuple.0.endedAt)
             XCTAssertEqual(".", tuple.1)
         }
         assertSucceeds(parseSuiteCompleted, forInput: "Test Suite 'BadTests' failed at 2018-03-19 14:46:47.406.") { tuple in
             XCTAssertEqual("BadTests", tuple.0.name)
             XCTAssertEqual(false, tuple.0.passed)
-            XCTAssertEqual(1521485207.406, tuple.0.endedAt.timeIntervalSince1970)
+            XCTAssertEqual(parseDateString("2018-03-19 14:46:47.406"), tuple.0.endedAt)
             XCTAssertEqual(".", tuple.1)
         }
     }
