@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Prelude",
+        "repositoryURL": "https://github.com/wayfair/Prelude",
+        "state": {
+          "branch": "master",
+          "revision": "77ae90ac9eef72b70178638eb7f39a9414aa44b1",
+          "version": null
+        }
+      },
+      {
+        "package": "Parsers",
+        "repositoryURL": "https://github.com/wayfair/swift-parsers",
+        "state": {
+          "branch": "master",
+          "revision": "b8066683f37f66a74a7d78c85a282a0fcffc178a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
